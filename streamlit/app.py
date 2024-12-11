@@ -25,5 +25,9 @@ if st.checkbox('Show Plot'):
         ax.plot(df[x_col], df[y_col], marker='o', color='b')
         ax.set_xlabel(x_col)
         ax.set_ylabel(y_col)
-        ax.set_title('{x_col} Vs {y_col}')
+        ax.set_title(f'{x_col} Vs {y_col}')
         st.pyplot(fig)
+    else:
+        st.warning('Uploaded files must have at least 3 columns')
+else:
+    st.warning('Please Upload CSV files')
